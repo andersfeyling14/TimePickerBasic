@@ -18,6 +18,7 @@ class TimePickerCanvas extends LitElement {
         this.is24mode = false;
         this.hour = 10;
         this.minute = 0;
+        this.number = [];
        
     }
     firstUpdated() { //Runs one time at start
@@ -213,6 +214,7 @@ class TimePickerCanvas extends LitElement {
     render() {
         // language=HTML
         return html`
+        
             <style>
                 :host {
                     display: block;
@@ -295,7 +297,8 @@ class TimePickerCanvas extends LitElement {
                 }
                 ` : ` `}
             </style>
-           
+            ${this.numbers.map(number => html`<div>${number}</div>`)}
+
             <div id="container">
                 <div id="whole-component">
                     <div id="time-picker-header">
