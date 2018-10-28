@@ -1,7 +1,7 @@
 import {LitElement, html, svg} from '@polymer/lit-element'; //Lit element allows for JS template literals, such as ${expression}
  
  
-class TimePickerCanvas extends LitElement {
+class TimePickerBasic extends LitElement {
     static get properties() {
         return {
             open : {type: Boolean},
@@ -346,7 +346,7 @@ class TimePickerCanvas extends LitElement {
     }
 }
  
-customElements.define('time-picker-canvas', TimePickerCanvas);
+//customElements.define('time-picker-basic', TimePickerBasic);
  
  
 /* Maps numbers on the clock face to positon in x and y both ways. 

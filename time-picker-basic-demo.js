@@ -1,8 +1,8 @@
 import {LitElement, html} from '@polymer/lit-element';
 
-import './time-picker-canvas';
+import './time-picker-basic';
 
-class TimePickerCanvasDemo extends LitElement {
+class TimePickerBasicsDemo extends LitElement {
     static get properties() {
         return {
             open0 : {type: Boolean},
@@ -56,23 +56,23 @@ class TimePickerCanvasDemo extends LitElement {
                 <input id="inputField1" @click="${e => this._onOpen1()}" readonly>
                 <input id="inputField2" @click="${e => this._onOpen2()}" readonly>
 
-                <time-picker-canvas .open="${this.open0}" .is24mode="${true}" 
+                <time-picker-basic .open="${this.open0}" .is24mode="${true}" 
                     @confirmTime="${e => this._onConfirm(e,0)}"
                     @close="${e => this._onClose()}">
-                </time-picker-canvas>
+                </time-picker-basic>
 
-                <time-picker-canvas .open="${this.open1}" 
+                <time-picker-basic .open="${this.open1}" 
                     @confirmTime="${e => this._onConfirm(e,1)}"
                     @close="${e => this._onClose()}">
-                </time-picker-canvas>
+                </time-picker-basic>
 
-                <time-picker-canvas class="is24mode" .open="${this.open2}" .is24mode="${false}"  
+                <time-picker-basic class="is24mode" .open="${this.open2}" .is24mode="${false}"  
                     @confirmTime="${e => this._onConfirm(e,2)}"
                     @close="${e => this._onClose()}">
-                </time-picker-canvas>
+                </time-picker-basic>
             </div>
         `;
     }
 }
 
-customElements.define('time-picker-canvas-demo', TimePickerCanvasDemo);
+customElements.define('time-picker-basic-demo', TimePickerBasicDemo);
